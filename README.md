@@ -1,0 +1,2 @@
+# datorium
+Datorium stundu pieraksti
