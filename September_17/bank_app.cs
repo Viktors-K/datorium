@@ -11,9 +11,12 @@ public class Bank
         client1.surname = "Bērziņš";
         client1.accountNumber = "LV198198198";
         client1.RequestInfo();
+        Client.Greetings();
     }
 }
 public class Client {
+    public static int clientCount = 0;
+
     public int id;
     public string name;
     public string surname;
@@ -21,5 +24,9 @@ public class Client {
     
     public void RequestInfo() {
         Console.WriteLine($"{id} {name} {surname} {accountNumber}");
+    }
+
+    public static void Greetings() {
+        Console.WriteLine("Hello, I am a Client Class!");
     }
 }
