@@ -6,6 +6,7 @@ public class Bank
     {
         Console.WriteLine ("Welcome to your bank!");
         var client1 = new Client(12345,"Janis","Berzins","LV1981981981981");
+        var client2 = new Client(12346, "Biruta", "Ozola", "LV1031031031031");
         client1.RequestInfo();
 
         client1.AccountNumber = "LT3543453453453";
@@ -45,7 +46,8 @@ public class Client {
         _id = id;
         _name = name;
         _surname = surname;
-        _accountNumber = accountNumber;
+		// atsaucas uz setter funkciju vertibas parbaudei
+        AccountNumber = accountNumber;
     }
 
     public void RequestInfo() {
@@ -54,5 +56,16 @@ public class Client {
 
     public static void Greetings() {
         Console.WriteLine("Hello, I am a Client Class!");
+    }
+}
+
+class Account {
+    private string _accountNumber;
+    private string _accountCurrency;
+    // private int _accountBalance;
+
+    public Account(string accountNumber, string accountCurrency){
+        _accountNumber = accountNumber;
+        _accountCurrency = accountCurrency;
     }
 }
