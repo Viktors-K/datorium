@@ -5,10 +5,10 @@ public class Bank
     public static void Main(string[] args)
     {
         Console.WriteLine ("Welcome to your bank!");
-        var client1 = new Client(12345,"Janis","Berzins","LV198198198");
+        var client1 = new Client(12345,"Janis","Berzins","LV1981981981981");
         client1.RequestInfo();
 
-        client1.AccountNumber = "LT354345345";
+        client1.AccountNumber = "LT3543453453453";
         Console.WriteLine(client1.AccountNumber);
         Client.Greetings();
     }
@@ -28,9 +28,14 @@ public class Client {
 
         set {
             if (string.IsNullOrEmpty(value)) {
-                Console.WriteLine("Error, you cannot assign empty value!");
+                Console.WriteLine("Error: cannot assign empty value!");
             } else {
-                _accountNumber = value;
+				if (value.Length != 15) {
+					Console.WriteLine("Error: invalid length of account number!");
+				} else {
+					_accountNumber = value;
+				}
+                
             }
         }
     }
