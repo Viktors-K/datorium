@@ -1,15 +1,20 @@
 using System;
+using System.Collections.Generic;
 
 public class Bank
 {
     public static void Main(string[] args)
     {
-        Console.WriteLine ("Welcome to your bank!");
+        Console.WriteLine("Welcome to your bank!");
+		
         var client1 = new Client(12345,"Janis","Berzins");
         var client2 = new Client(12346, "Biruta", "Ozola");
-        client1.RequestInfo();
-
-        Client.Greetings();
+        
+		var account1 = new Account("LV1234567890123", "EUR");
+		var account2 = new Account("US1234567890124", "USD");
+		
+		client1.AddAccount(account1);
+		client1.AddAccount(account2);
     }
 }
 public class Client {
@@ -18,7 +23,8 @@ public class Client {
     private int _id;
     private string _name;
     private string _surname;
-    private string _accountNumber;
+
+    private List<Account> _accountsList = new List<Account>();
 
     // konstruktors
     public Client(int id, string name, string surname) {
@@ -28,15 +34,15 @@ public class Client {
     }
 
     public void RequestInfo() {
-        Console.WriteLine($"{_id} {_name} {_surname}");
+        Console.WriteLine($"Client ID:{_id} Name:{_name} Surname:{_surname}");
     }
-
-    public static void Greetings() {
-        Console.WriteLine("Hello, I am a Client Class!");
-    }
+	
+	public void AddAccount(Account account) {
+		_accountsList.Add(account);
+	}
 }
 
-class Account {
+public class Account {
     private string _accountNumber;
     private string _accountCurrency;
 
