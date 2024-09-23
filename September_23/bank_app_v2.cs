@@ -14,6 +14,7 @@ public class Bank
 		client1.AddAccount(new Account("US1234567890124", "USD"));
 		
 		client1.PrintAccounts();
+		client2.PrintAccounts();
     }
 }
 public class Client {
@@ -49,7 +50,7 @@ public class Client {
     public void PrintAccounts() {
         Console.WriteLine($"Client {_name} {_surname} has the following accounts:");
         foreach (Account account in _accountsList) {
-            Console.WriteLine($"Number: {account.AccountNumber}.");
+            Console.WriteLine($"Number: {account.AccountNumber}. ({account.AccountCurrency})");
         }
     }
 
@@ -64,6 +65,11 @@ public class Account {
     private string _accountNumber;
     private string _accountCurrency;
 
+	public string AccountCurrency {
+		get {
+			return _accountCurrency;
+		}
+	}
     // accountNumber parbaude
     public string AccountNumber {
         get {
