@@ -16,8 +16,9 @@ public class Bank
 		client1.PrintAccounts();
 		client2.PrintAccounts();
 
-        var transaction1 = new Transaction(20, "Withdrawal");
-        Console.WriteLine(transaction1.transactionInfo());
+        client1.AccountsList[0].Deposit(20);
+        client1.AccountsList[0].Withdraw(30);
+        client1.AccountsList[0].RequestTransactions();
     }
 }
 public class Client {
@@ -31,6 +32,11 @@ public class Client {
     // kontu listes definicija
     private List<Account> _accountsList = new List<Account>();
 
+    public List<Account> AccountsList {
+        get {
+            return _accountsList;
+        }
+    }
     // konstruktors
     public Client(int id, string name, string surname) {
         _id = id;
@@ -67,13 +73,14 @@ public class Account {
     // definicija
     private string _accountNumber;
     private string _accountCurrency;
+    private List<Transaction> _transactionList = new List<Transaction>();
 
 	public string AccountCurrency {
 		get {
 			return _accountCurrency;
 		}
 	}
-    // accountNumber parbaude
+
     public string AccountNumber {
         get {
             return _accountNumber;
@@ -98,20 +105,52 @@ public class Account {
         AccountNumber = accountNumber;
         _accountCurrency = accountCurrency;
     }
+
+    // deposit tranzakcijas metode
+    public void Deposit(double amount) {
+        _transactionList.Add(new Transaction(amount, "deposit"));
+    }
+
+    // withdraw tranzakcijas metode
+    public void Withdraw(double amount) {
+        _transactionList.Add(new Transaction(amount, "withdraw"));
+    }
+
+    // tranzakciju izvada metode
+    public void RequestTransactions() {
+        Console.WriteLine($"The following transactions have been made on account {AccountNumber}.");
+        foreach (Transaction transaction in _transactionList) {
+            Console.WriteLine($"Transaction type: {transaction.TransactionType}. Transaction amount: {transaction.TransactionAmount}.");
+        }
+    }
 }
 
 public class Transaction {
+    //definicija
     private DateTime _transactionTime;
-    private int _transactionAmount;
+    private double _transactionAmount;
     private string _transactionType;
 
-    public Transaction(int transactionAmount, string transactionType){
+    public string TransactionType {
+        get {
+            return _transactionType;
+        }
+    }
+    public double TransactionAmount {
+        get {
+            return _transactionAmount;
+        }
+    }
+
+    //konstruktors
+    public Transaction(double transactionAmount, string transactionType){
         _transactionAmount = transactionAmount;
         _transactionType = transactionType;
         _transactionTime = DateTime.Now;
     }
-    
+
+    //tranzakcijas informacijas izvada metode
     public string transactionInfo() {
-        return ($"{_transactionType} transaction of {_transactionAmount} was made on {_transactionTime}.");
+        return ($"At {_transactionTime}, a {_transactionType} transaction of {_transactionAmount} was made.");
     }
 }
