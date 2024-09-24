@@ -16,8 +16,10 @@ public class Bank
 		client1.PrintAccounts();
 		client2.PrintAccounts();
 
-        client1.AccountsList[0].Deposit(20);
+        client1.AccountsList[0].Deposit(1200);
         client1.AccountsList[0].Withdraw(30);
+        client1.AccountsList[0].Withdraw(50);
+        client1.AccountsList[0].Withdraw(3);
         client1.AccountsList[0].RequestTransactions();
     }
 }
@@ -120,7 +122,7 @@ public class Account {
     public void RequestTransactions() {
         Console.WriteLine($"The following transactions have been made on account {AccountNumber}.");
         foreach (Transaction transaction in _transactionList) {
-            Console.WriteLine($"Transaction type: {transaction.TransactionType}. Transaction amount: {transaction.TransactionAmount}.");
+            Console.WriteLine($"Transaction type: {transaction.TransactionType}. Transaction amount: {transaction.TransactionAmount}. Transaction time: {transaction.TransactionTime}");
         }
     }
 }
@@ -139,6 +141,11 @@ public class Transaction {
     public double TransactionAmount {
         get {
             return _transactionAmount;
+        }
+    }
+	public DateTime TransactionTime {
+        get {
+            return _transactionTime;
         }
     }
 
