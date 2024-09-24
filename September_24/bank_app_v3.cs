@@ -15,6 +15,9 @@ public class Bank
 		
 		client1.PrintAccounts();
 		client2.PrintAccounts();
+
+        var transaction1 = new Transaction(20, "Withdrawal");
+        Console.WriteLine(transaction1.transactionInfo());
     }
 }
 public class Client {
@@ -94,5 +97,21 @@ public class Account {
     public Account(string accountNumber, string accountCurrency){
         AccountNumber = accountNumber;
         _accountCurrency = accountCurrency;
+    }
+}
+
+public class Transaction {
+    private DateTime _transactionTime;
+    private int _transactionAmount;
+    private string _transactionType;
+
+    public Transaction(int transactionAmount, string transactionType){
+        _transactionAmount = transactionAmount;
+        _transactionType = transactionType;
+        _transactionTime = DateTime.Now;
+    }
+    
+    public string transactionInfo() {
+        return ($"{_transactionType} transaction of {_transactionAmount} was made on {_transactionTime}.");
     }
 }
