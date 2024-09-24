@@ -124,6 +124,19 @@ public class Account {
         foreach (Transaction transaction in _transactionList) {
             Console.WriteLine($"Transaction type: {transaction.TransactionType}. Transaction amount: {transaction.TransactionAmount}. Transaction time: {transaction.TransactionTime}");
         }
+        Console.WriteLine($"This account has a balance of {CalculateBalance()}.");
+    }
+
+    public double CalculateBalance() {
+        double balance = 0;
+        foreach (Transaction transaction in _transactionList) {
+            if (transaction.TransactionType == "deposit") {
+                balance = balance + transaction.TransactionAmount;
+            } else {
+                balance = balance - transaction.TransactionAmount;
+            }
+        }
+        return balance;
     }
 }
 
