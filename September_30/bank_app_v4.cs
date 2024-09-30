@@ -12,6 +12,7 @@ public class Bank
 
 		client1.AddAccount(new Account("LV1234567890123", "EUR"));
 		client1.AddAccount(new Account("US1234567890124", "USD"));
+        client2.AddAccount(new Account("LV1629462790124", "EUR"));
 		
 		client1.PrintAccounts();
 		client2.PrintAccounts();
@@ -127,7 +128,7 @@ public class Account {
 
     public void Transfer(double amount, Account account) {
         if (amount <= CalculateBalance()) {
-            _transferList.Add(new Transfer(amount, account));
+            _transferList.Add(new Transfer(amount, account, this);
         } else {
             Console.WriteLine($"Error: transfer of {amount} would put account in negative funds!");
         }
@@ -206,6 +207,10 @@ public class Transfer {
             return _time;
         }
     }
+//
+// PIIEVIENJOU THIS KEYWORDU KA 3 ARGUMENTU KONSTRUKTORAM
+//JAPIEVIENO SENDING ACCOUNT PARAMETRS
+//
 
     //konstruktors
     public Transfer(double amount, Account recievingAccount){
