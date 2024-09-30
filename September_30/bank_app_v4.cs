@@ -21,6 +21,8 @@ public class Bank
         client1.AccountsList[0].Withdraw(50);
         client1.AccountsList[0].Withdraw(3);
         client1.AccountsList[0].RequestTransactions();
+        client1.AccountsList[0].Transfer(50, client2.AccountsList[0]);
+        client2.AccountsList[0].RequestTransactions();
     }
 }
 public class Client {
@@ -76,6 +78,7 @@ public class Account {
     private string _accountNumber;
     private string _accountCurrency;
     private List<Transaction> _transactionList = new List<Transaction>();
+    private List<Transfer> _transferList = new List<Transfer>();
 
 	public string AccountCurrency {
 		get {
@@ -119,6 +122,14 @@ public class Account {
             _transactionList.Add(new Transaction(amount, "withdraw"));
         } else {
             Console.WriteLine($"Error: withdrawal of {amount} would put account in negative funds!");
+        }
+    }
+
+    public void Transfer(double amount, Account account) {
+        if (amount <= CalculateBalance()) {
+            _transferList.Add(new Transfer(amount, account));
+        } else {
+            Console.WriteLine($"Error: transfer of {amount} would put account in negative funds!");
         }
     }
 
@@ -176,5 +187,34 @@ public class Transaction {
     //tranzakcijas informacijas izvada metode
     public string transactionInfo() {
         return ($"At {_transactionTime}, a {_transactionType} transaction of {_transactionAmount} was made.");
+    }
+}
+
+public class Transfer {
+    //definicija
+    private DateTime _time;
+    private double _amount;
+    private Account _recievingAccount;
+
+    public double Amount {
+        get {
+            return _amount;
+        }
+    }
+	public DateTime Time {
+        get {
+            return _time;
+        }
+    }
+
+    //konstruktors
+    public Transfer(double amount, Account recievingAccount){
+        _amount = amount;
+        _time = DateTime.Now;
+        _recievingAccount = recievingAccount;
+    }
+    //tranfera informacijas izvada metode
+    public string transferInfo() {
+        return ($"At {_transferTime}, a transfer of {_transferAmount} to {} was made.");
     }
 }
