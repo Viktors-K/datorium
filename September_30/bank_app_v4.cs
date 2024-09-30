@@ -115,7 +115,11 @@ public class Account {
 
     // withdraw tranzakcijas metode
     public void Withdraw(double amount) {
-        _transactionList.Add(new Transaction(amount, "withdraw"));
+        if (amount <= CalculateBalance()) {
+            _transactionList.Add(new Transaction(amount, "withdraw"));
+        } else {
+            Console.WriteLine($"Error: withdrawal of {amount} would put account in negative funds!");
+        }
     }
 
     // tranzakciju izvada metode
