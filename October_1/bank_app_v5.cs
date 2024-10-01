@@ -127,20 +127,22 @@ public class Account {
             Console.WriteLine($"Error: withdrawal of {amount} would put account in negative funds!");
         }
     }
-
+    // transfera sutisanas metode
     public void Transfer(double amount, Account account) {
+        // valutu parbaude
         if (this.AccountCurrency == account.AccountCurrency) {
+            // naudas pietiekamibas parbaude
             if (amount <= CalculateBalance()) {
-            _transferList.Add(new Transfer(amount, account, this));
-			account.RecieveTransfer(amount, this);
+                _transferList.Add(new Transfer(amount, account, this));
+                account.RecieveTransfer(amount, this);
             } else {
-                Console.WriteLine($"Error: transfer of {amount} would put account in negative funds!");
+                Console.WriteLine($"Error: transfer of {amount} {this.AccountCurrency} would put account in negative funds!");
             }
         } else {
             Console.WriteLine($"Error: account currencies are different! Transfer cancelled.");
         }
     }
-
+    // transfera sanemsanas metode
     public void RecieveTransfer(double amount, Account account) {
         _recievedTransferList.Add(new Transfer(amount, this, account));
         Console.WriteLine($"A transfer to {AccountNumber} of {amount} has been recieved.");
@@ -149,20 +151,26 @@ public class Account {
     // tranzakciju izvada metode
     public void RequestTransactions() {
         Console.WriteLine($"The following transactions have been made on account {AccountNumber}.");
+        Console.WriteLine("------------------------------------------------------");
+        // tranzakcijas
         foreach (Transaction transaction in _transactionList) {
             Console.WriteLine($"Transaction type: {transaction.TransactionType}. Transaction amount: {transaction.TransactionAmount}. Transaction time: {transaction.TransactionTime}");
         }
+        // transferi no konta
         foreach (Transfer transfer in _transferList) {
             Console.WriteLine($"Transfer type: sending funds. Transfer amount: {transfer.Amount}. Transaction time: {transfer.Time}. Recieving account:{transfer.recievingAccountNumber}");
         }
+        // transferi uz kontu
         foreach (Transfer transfer in _recievedTransferList) {
             Console.WriteLine($"Transfer type: recieving funds. Transfer amount: {transfer.Amount}. Transaction time: {transfer.Time}. Sending account:{transfer.sendingAccountNumber}");
         }
-        Console.WriteLine($"This account has a balance of {CalculateBalance()}.");
+        Console.WriteLine("------------------------------------------------------");
+        Console.WriteLine($"This account has a balance of {CalculateBalance()} {this.AccountCurrency}.\n");
     }
 
     public double CalculateBalance() {
         double balance = 0;
+        // konta tranzakcijas
         foreach (Transaction transaction in _transactionList) {
             if (transaction.TransactionType == "deposit") {
                 balance = balance + transaction.TransactionAmount;
