@@ -13,6 +13,7 @@ public class Bank
 		client1.AddAccount(new Account("LV1234567890123", "EUR"));
 		client1.AddAccount(new Account("US1234567890124", "USD"));
         client2.AddAccount(new Account("LV1629462790124", "EUR"));
+		client2.AddAccount(new Account("US6284510845124", "USD"));
 		
 		client1.PrintAccounts();
 		client2.PrintAccounts();
@@ -21,9 +22,9 @@ public class Bank
         client1.AccountsList[0].Withdraw(30);
         client1.AccountsList[0].Withdraw(50);
         client1.AccountsList[0].Withdraw(3);
-        client1.AccountsList[0].RequestTransactions();
         client1.AccountsList[0].Transfer(50, client2.AccountsList[0]);
-        client2.AccountsList[0].RequestTransactions();
+        client1.AccountsList[0].RequestTransactions();
+		client2.AccountsList[0].RequestTransactions();
     }
 }
 public class Client {
@@ -128,10 +129,15 @@ public class Account {
     }
 
     public void Transfer(double amount, Account account) {
-        if (amount <= CalculateBalance()) {
+        if (this.AccountCurrency == account.AccountCurrency) {
+            if (amount <= CalculateBalance()) {
             _transferList.Add(new Transfer(amount, account, this));
+			account.RecieveTransfer(amount, this);
+            } else {
+                Console.WriteLine($"Error: transfer of {amount} would put account in negative funds!");
+            }
         } else {
-            Console.WriteLine($"Error: transfer of {amount} would put account in negative funds!");
+            Console.WriteLine($"Error: account currencies are different! Transfer cancelled.");
         }
     }
 
