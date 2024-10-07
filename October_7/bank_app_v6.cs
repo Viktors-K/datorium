@@ -293,7 +293,7 @@ public class LocalClient : Client {
     }
 	// info drukasanas metode
     public override void RequestInfo() {
-        Console.WriteLine($"Client ID:{Id} Name:{Name} Surname:{Surname} City:{_city}");
+        Console.WriteLine($"Local Client ID:{Id} Name:{Name} Surname:{Surname} City:{_city}");
     }
 }
 
@@ -307,6 +307,6 @@ public class ForeignClient : Client {
         _country = country;
     }
 	   public override void RequestInfo() {
-        Console.WriteLine($"Client ID:{Id} Name:{Name} Surname:{Surname} Country:{_country}");
+        Console.WriteLine($"Foreign Client ID:{Id} Name:{Name} Surname:{Surname} Country:{_country}");
     }
 }
