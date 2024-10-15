@@ -24,7 +24,19 @@ public class App
 			kubuSkaits:3,
 			forma:13
 		);
-		
+		Console.WriteLine(bloks1.Nosaukums);
+		Console.WriteLine(bloks1.Tilpums());
+		var bloks2 = new Bloks(
+			malasGarums:7,
+			krasa:"zils",
+			kubuSkaits:5,
+			forma:23
+		);
+		Console.WriteLine(bloks2.Nosaukums);
+		Console.WriteLine(bloks2.Tilpums());
+		bloks2.Forma = 12;
+		Console.WriteLine(bloks2.Nosaukums);
+		Console.WriteLine(bloks2.Tilpums());
 	}
 }
 
@@ -33,8 +45,7 @@ public class Kubs
     public int MalasGarums;
     public string Krasa;
     
-    public Kubs(int malasGarums, string krasa)
-    {
+    public Kubs(int malasGarums, string krasa) {
         MalasGarums = (malasGarums >= 2 && malasGarums <= 10) ? malasGarums : 2;
         Krasa = krasa;
     }
@@ -51,25 +62,15 @@ public class Bloks : Kubs
     
     public string Nosaukums => Krasa + _kubuSkaits.ToString();
     public int Forma;
-    public int Derigums;
-
-    public Bloks(int malasGarums, string krasa,
-    int kubuSkaits, int forma) : base(malasGarums, krasa)
-    {
+    public int Derigums => _allowedForms.Contains(Forma) ? 1 : 0;
+    public Bloks(int malasGarums, string krasa, int kubuSkaits, int forma) : base(malasGarums, krasa) {
         _kubuSkaits = kubuSkaits;
-        if (kubuSkaits < 1 || kubuSkaits > 4)
-        {
+        if (kubuSkaits < 1 || kubuSkaits > 4) {
             Console.WriteLine("Kubu skaits neatbilst nosacījumiem");
         }
-        
         Forma = forma;
-        if (!_allowedForms.Contains(forma))
-        {
+        if (Derigums == 0) {
             Console.WriteLine("Forma neatbilst nosacījumiem");
-            Derigums = 0;
-        } else
-        {
-            Derigums = 1;
         }
     }
     
