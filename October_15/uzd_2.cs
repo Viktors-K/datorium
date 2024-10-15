@@ -18,7 +18,14 @@ public class App
         }
         
         Console.WriteLine(kubg.MalasGarums);
-    }
+    	var bloks1 = new Bloks(
+			malasGarums:5,
+			krasa:"oranžs",
+			kubuSkaits:3,
+			forma:13
+		);
+		
+	}
 }
 
 public class Kubs
