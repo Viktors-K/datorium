@@ -85,3 +85,20 @@ VALUES
     ('Jenifere', 'Pottere', 3.2);
 SELECT * FROM Doctors
 ```
+### Removing values above a treshold
+```SQL
+DELETE FROM Doctors WHERE DoctorID > 3
+```
+
+### Creating a new column in existing table with a value based on an existing value
+```SQL
+ALTER TABLE Doctors 
+    ADD COLUMN NewMultiplier INTEGER;
+UPDATE Doctors
+    SET NewMultiplier = Multiplier * 100;
+```
+### Adding calculated column to query
+```SQL
+SELECT *, (Multiplier * 100) AS NewMultiplier
+FROM Doctors
+```
