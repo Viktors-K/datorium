@@ -12,14 +12,14 @@ SELECT pets.*;
 SELECT Country, Count(*) AS number_of_transactions
 FROM Sales
 GROUP BY Country
-Order by number_of_transactions desc;
+ORDER BY number_of_transactions DESC;
 ```
 ### Joining two tables together
 
 ```SQL
 SELECT Sales.*, Procedures.Price
-From Sales
-LEFT JOIN Procedures on Sales.ProcedureCode = Procedures.procedurecode
+FROM Sales
+LEFT JOIN Procedures ON Sales.ProcedureCode = Procedures.procedurecode
 ```
 ### Calculating the average and joining to tables
 
@@ -27,11 +27,11 @@ LEFT JOIN Procedures on Sales.ProcedureCode = Procedures.procedurecode
 SELECT 
 	Sales.Country, 
 	SUM(Procedures.Price) AS SalesAmount,
-	COUNT(*) as SalesCount,
+	COUNT(*) AS SalesCount,
 	SUM(Procedures.Price)/COUNT(*) AS AveragePrice
 
 FROM Sales
-LEFT JOIN Procedures on Sales.ProcedureCode = Procedures.procedurecode
+LEFT JOIN Procedures ON Sales.ProcedureCode = Procedures.procedurecode
 GROUP BY Country
 ORDER BY SalesAmount DESC
 ```
