@@ -26,7 +26,7 @@ class Program {
 			}
         }
         catch (Exception ex) {
-            Console.WriteLine("Test");
+            Console.WriteLine(ex);
         }
     }
 	
@@ -35,6 +35,7 @@ class Program {
 		private string _connectionString;
 		public PizzaCtrl(string connectionString) {
 			_connectionString = connectionString;
+			CreatePizzaTable();
 			}
 		private void CreatePizzaTable() {
 			using (var connection = new SqliteConnection(_connectionString)) {
@@ -73,7 +74,7 @@ class Program {
 				return selectCmd.ExecuteReader();
 			}
 		}
-		private void AddPizza() {
+		public void AddPizza() {
 			Console.WriteLine("Please enter Pizza name");
 			string pizzaName = Console.ReadLine();
 			Console.WriteLine("Please enter Pizza size");
@@ -82,7 +83,7 @@ class Program {
 			double pizzaPrice = Convert.ToDouble(Console.ReadLine());
 			this.AddPizzaToTable(pizzaName,pizzaSize,pizzaPrice);
 		}
-		private void PrintPizzas() {
+		public void PrintPizzas() {
 			using (var reader = this.GetAllPizzasFromTable()) {
 				Console.WriteLine("Pizza List:");
 				while(reader.Read()) {
