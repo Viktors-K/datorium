@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Microsoft.Data.Sqlite;
 
 class Program {
@@ -37,7 +38,7 @@ class Program {
     }
 
 public abstract class TableCtrl {
-	private string _connectionString;
+	public string _connectionString;
 	public string _infoObjectType;
 	public TableCtrl(string connectionString, string infoObjectType, string creationCommand) {
 		_connectionString = connectionString;
@@ -53,27 +54,36 @@ public abstract class TableCtrl {
 			Console.WriteLine("Table created or already exists.");
 		}
 	}
-	public SqliteDataReader GetAllItemsFromTable() {
+	public List<Dictionary<string, object>> GetAllItemsFromTable() {
+		var result = new List<Dictionary<string, object>>();
 		using (var connection = new SqliteConnection(_connectionString)) {
+			connection.Open();
 			var selectCmd = connection.CreateCommand();
-			selectCmd.CommandText = "SELECT * FROM {_infoObjectType}";
-			return selectCmd.ExecuteReader();
-		}
-	}
+			selectCmd.CommandText = $"SELECT * FROM {_infoObjectType}";
+			using (var reader = selectCmd.ExecuteReader()) {
+				while (reader.Read()) {
+					var row = new Dictionary<string, object>();
+					for (int i = 0; i < reader.FieldCount; i++) {
+						row[reader.GetName(i)] = reader.GetValue(i);
+					}
+					result.Add(row);
+					}
+				}
+			}
+		return result;
+    }
 	public abstract void AddToTable(params string[] attributes);
 	public abstract void AddItem();
 	public abstract void PrintItems();
 }
 
 public class CarCtrl : TableCtrl {
-	private string _connectionString;
 	public CarCtrl(string connectionString, string infoObjectType, string creationCommand) : base(connectionString, infoObjectType, creationCommand) { }
 	public override void AddToTable(params string[] attributes) {
 		using (var connection = new SqliteConnection(_connectionString)) {
 			connection.Open();
 			var insertCmd = connection.CreateCommand();
 			insertCmd.CommandText = $"INSERT INTO {_infoObjectType}(Model, HourlyPrice, KmPrice) VALUES (@model, @hourlyPrice, @kmPrice)";
-			Console.WriteLine(insertCmd.CommandText);
 			insertCmd.Parameters.AddWithValue("@model", attributes[0]);
 			insertCmd.Parameters.AddWithValue("@hourlyPrice", Convert.ToDouble(attributes[1]));
 			insertCmd.Parameters.AddWithValue("@kmPrice", Convert.ToDouble(attributes[2]));
@@ -90,11 +100,10 @@ public class CarCtrl : TableCtrl {
 		this.AddToTable(carModel,carKmPrice,carKmPrice);
 	}
 	public override void PrintItems() {
-		using (var reader = this.GetAllItemsFromTable()) {
-			Console.WriteLine("Car List:");
-			while(reader.Read()) {
-				Console.WriteLine($"Id: {reader["Id"]}, Model: {reader["Model"]}, Hourly Price: {reader["HourlyPrice"]}, Kilometer Price: {reader["KmPrice"]}");
-			}
-		}	
+		var items = this.GetAllItemsFromTable();
+		Console.WriteLine("Car List:");
+		foreach (var row in items) {
+			Console.WriteLine($"Id: {row["Id"]}, Model: {row["Model"]}, Hourly Price: {row["HourlyPrice"]}, Kilometer Price: {row["KmPrice"]}");
+		}
 	}
 }}
