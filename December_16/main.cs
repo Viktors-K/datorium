@@ -1,16 +1,44 @@
 using System;
 using Microsoft.Data.Sqlite;
 
-public class Program {
-	public static void Main() {
-		
-		Console.WriteLine("Hello World");
-	}
-}
+class Program {
+    static void Main(string[] args) {
+        try {
+			var creationString1 = @"
+					CREATE TABLE IF NOT EXISTS Cars (
+						Id INTEGER PRIMARY KEY AUTOINCREMENT,
+						Model TEXT NOT NULL,
+						HourlyPrice REAL NOT NULL,
+						KmPrice REAL NOT NULL
+					);
+				";
+            var controller1 = new CarCtrl("Data Source=cars.db", "Cars", creationString1);
+			while (true) {
+				Console.WriteLine("Choose option: 'add', 'print' or 'stop'.");
+				var userCommand = Console.ReadLine();
+				switch (userCommand) {
+					case "add":
+						controller1.AddItem();
+						break;
+					case "print":
+						controller1.PrintItems();
+						break;
+					case "stop":
+						return;
+					default:
+						Console.WriteLine("Invalid option.");
+						break;
+				}
+			}
+        }
+        catch (Exception ex) {
+            Console.WriteLine(ex);
+        }
+    }
 
 public abstract class TableCtrl {
 	private string _connectionString;
-	private string _infoObjectType;
+	public string _infoObjectType;
 	public TableCtrl(string connectionString, string infoObjectType, string creationCommand) {
 		_connectionString = connectionString;
 		_infoObjectType = infoObjectType;
@@ -44,7 +72,8 @@ public class CarCtrl : TableCtrl {
 		using (var connection = new SqliteConnection(_connectionString)) {
 			connection.Open();
 			var insertCmd = connection.CreateCommand();
-			insertCmd.CommandText = "INSERT INTO Cars(Model, HourlyPrice, KmPrice) VALUES (@model, @hourlyPrice, @kmPrice)";
+			insertCmd.CommandText = $"INSERT INTO {_infoObjectType}(Model, HourlyPrice, KmPrice) VALUES (@model, @hourlyPrice, @kmPrice)";
+			Console.WriteLine(insertCmd.CommandText);
 			insertCmd.Parameters.AddWithValue("@model", attributes[0]);
 			insertCmd.Parameters.AddWithValue("@hourlyPrice", Convert.ToDouble(attributes[1]));
 			insertCmd.Parameters.AddWithValue("@kmPrice", Convert.ToDouble(attributes[2]));
@@ -68,4 +97,4 @@ public class CarCtrl : TableCtrl {
 			}
 		}	
 	}
-}
+}}
