@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Microsoft.Data.Sqlite;
+// AutoTesla, a system for renting Teslas.
 
 class Program {
     static void Main(string[] args) {
@@ -13,7 +14,16 @@ class Program {
 						KmPrice REAL NOT NULL
 					);
 				";
-            var controller1 = new CarCtrl("Data Source=cars.db", "Cars", creationString1);
+            var controller1 = new CarCtrl("Data Source=main.db", "Cars", creationString1);
+			var creationString2 = @"
+					CREATE TABLE IF NOT EXISTS Clients (
+						Id INTEGER PRIMARY KEY AUTOINCREMENT,
+						Name TEXT NOT NULL,
+						Surname TEXT NOT NULL,
+						Email TEXT NOT NULL
+					);
+				";
+            var controller2 = new ClientCtrl("Data Source=main.db", "Clients", creationString2);
 			while (true) {
 				Console.WriteLine("Choose option: 'add', 'print' or 'stop'.");
 				var userCommand = Console.ReadLine();
@@ -36,7 +46,7 @@ class Program {
             Console.WriteLine(ex);
         }
     }
-
+}
 public abstract class TableCtrl {
 	public string _connectionString;
 	public string _infoObjectType;
@@ -106,4 +116,35 @@ public class CarCtrl : TableCtrl {
 			Console.WriteLine($"Id: {row["Id"]}, Model: {row["Model"]}, Hourly Price: {row["HourlyPrice"]}, Kilometer Price: {row["KmPrice"]}");
 		}
 	}
-}}
+}
+
+public class ClientCtrl : TableCtrl {
+	public ClientCtrl(string connectionString, string infoObjectType, string creationCommand) : base(connectionString, infoObjectType, creationCommand) { }
+	public override void AddToTable(params string[] attributes) {
+		using (var connection = new SqliteConnection(_connectionString)) {
+			connection.Open();
+			var insertCmd = connection.CreateCommand();
+			insertCmd.CommandText = $"INSERT INTO {_infoObjectType}(Name, Surname, Email) VALUES (@name, @surname, @email)";
+			insertCmd.Parameters.AddWithValue("@name", attributes[0]);
+			insertCmd.Parameters.AddWithValue("@surname", attributes[1]);
+			insertCmd.Parameters.AddWithValue("@email", attributes[2]);
+			insertCmd.ExecuteNonQuery();
+		}
+	}
+	public override void AddItem() {
+		Console.WriteLine("Please enter Client name");
+		string clientName = Console.ReadLine();
+		Console.WriteLine("Please enter Client surname");
+		string clientSurname = Console.ReadLine();
+		Console.WriteLine("Please enter Client e-mail");
+		string clientEmail = Console.ReadLine();
+		this.AddToTable(clientName,clientSurname,clientEmail);
+	}
+	public override void PrintItems() {
+		var items = this.GetAllItemsFromTable();
+		Console.WriteLine("Client List:");
+		foreach (var row in items) {
+			Console.WriteLine($"Id: {row["Id"]}, Name: {row["Name"]}, Surname: {row["Surname"]}, E-mail: {row["Email"]}");
+		}
+	}
+}
