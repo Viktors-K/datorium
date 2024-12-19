@@ -1,6 +1,6 @@
 using System;
 using Microsoft.Data.Sqlite;
-
+using System.Collections.Generic;
 namespace TeslaRentalPlatform {
     public class Car {
         public int ID { get; set; }
@@ -27,7 +27,24 @@ namespace TeslaRentalPlatform {
     }
 	
     class Program {
-        private void CreateTables(SqliteConnection connection) {
+		private static List<Car> carList = new List<Car>();
+        private static List<Car> carReader(SqliteConnection connection) {
+			var carList = new List<Car>();
+			var selectCmd = connection.CreateCommand();
+			selectCmd.CommandText = $"SELECT * FROM Cars";
+			using (var reader = selectCmd.ExecuteReader()) {
+				while (reader.Read()) {
+					var newCar = new Car();
+					for (int i = 0; i < reader.FieldCount; i++) {
+						var property = typeof(Car).GetProperty(reader.GetName(i));
+                    	property.SetValue(newCar, Convert.ChangeType(reader.GetValue(i), property.PropertyType));
+					}
+					carList.Add(newCar);
+				}
+			}
+			return carList;
+		}
+		private static void CreateTables(SqliteConnection connection) {
 			var createTableCmd = connection.CreateCommand();
 			createTableCmd.CommandText =@"
 				CREATE TABLE IF NOT EXISTS Cars (
@@ -53,27 +70,34 @@ namespace TeslaRentalPlatform {
 					StartTime DATETIME NOT NULL,
 					EndTime DATETIME NOT NULL,
 					DistanceKm DECIMAL NOT NULL,
-					TotalPayment DECIMAL NOT NULL
+					TotalPayment DECIMAL NOT NULL,
+					FOREIGN KEY (ClientId) REFERENCES Clients(Id),
+					FOREIGN KEY (CarId) REFERENCES Cars(Id)
 				);";
 			createTableCmd.ExecuteNonQuery();
 			Console.WriteLine("Tables created or already existing.");
 		}
-        static void AddCar(string model, double hourlyRate, double perKmRate) {
+        static void AddCar(SqliteConnection connection, string model, double hourlyRate, double perKmRate) {
 			
         }
-        static void RegisterClient(string name, string surname, string email) {
+        static void RegisterClient() {
 			
         }
-        static void RentCar(int clientId, int carId, DateTime startTime, DateTime endTime, double distanceKm) {
+        static void RentCar(Client client, Car car, DateTime startTime, DateTime endTime, double distanceKm) {
 			
         }
         static void CalculatePayment(int rentalId) {
 			
         }
 		static void Main(string[] args) {
-			var connection = new SqliteConnection("Data Source=main.db");
-			connection.Open();
-			CreateTables(connection);
+			using (var connection = new SqliteConnection("Data Source=main.db")) {
+				connection.Open();
+				CreateTables(connection);
+				carList = carReader(connection);
+				foreach (var car in carList) {
+        			Console.WriteLine($"ID: {car.ID}, Model: {car.Model}, Hourly Rate: {car.HourlyRate}, Per Km Rate: {car.PerKmRate}");
+			    }
+			}
         }
     }
 }
