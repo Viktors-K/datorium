@@ -1,0 +1,16 @@
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\bin\Debug\net6.0-windows\FirstApp.exe
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\bin\Debug\net6.0-windows\FirstApp.deps.json
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\bin\Debug\net6.0-windows\FirstApp.runtimeconfig.json
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\bin\Debug\net6.0-windows\FirstApp.dll
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\bin\Debug\net6.0-windows\FirstApp.pdb
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.Form1.resources
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.csproj.GenerateResource.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.GeneratedMSBuildEditorConfig.editorconfig
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.AssemblyInfoInputs.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.AssemblyInfo.cs
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.csproj.CoreCompileInputs.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.dll
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\refint\FirstApp.dll
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.pdb
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\FirstApp.genruntimeconfig.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\FirstApp\FirstApp\obj\Debug\net6.0-windows\ref\FirstApp.dll
