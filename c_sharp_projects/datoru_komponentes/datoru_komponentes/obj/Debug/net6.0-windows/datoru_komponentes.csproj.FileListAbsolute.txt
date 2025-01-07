@@ -1,0 +1,17 @@
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.exe
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.deps.json
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.runtimeconfig.json
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.dll
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.pdb
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.FormMain.resources
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.csproj.GenerateResource.cache
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.AssemblyInfoInputs.cache
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.AssemblyInfo.cs
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.csproj.CoreCompileInputs.cache
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.sourcelink.json
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.dll
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\refint\datoru_komponentes.dll
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.pdb
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.genruntimeconfig.cache
+D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\ref\datoru_komponentes.dll
