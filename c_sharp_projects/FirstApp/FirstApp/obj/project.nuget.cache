@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "f00aZfRJMuXTy/W5i53qVQGnlYYbanFk+JYJfmaT7KgxhVqmtnUYlTiT8/6YdNUR5KLbtCJuet8EI4bu1drBlw==",
+  "dgSpecHash": "ME0uOqUFg4p3ZNvuzppUjdKRzsk2s7MaoqOvG5FzE7AD4XDN8VPY8JNshgV3Vsvw1lNejG/HtgR9WlYgwmd2/A==",
   "success": true,
-  "projectFilePath": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
+    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
+  ],
   "logs": []
 }

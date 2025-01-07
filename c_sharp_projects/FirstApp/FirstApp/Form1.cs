@@ -5,7 +5,7 @@ namespace FirstApp
         private int redValue = 0;
         private int greenValue = 0;
         private int blueValue = 0;
-
+        private Random rand = new Random();
         public Form1()
         {
             InitializeComponent();
@@ -14,7 +14,7 @@ namespace FirstApp
         private void numericUpDownRed_ValueChanged(object sender, EventArgs e)
         {
             redValue = (int)numericUpDownRed.Value;
-            pictureBoxRed.BackColor = Color.FromArgb(redValue, 0,0);
+            pictureBoxRed.BackColor = Color.FromArgb(redValue, 0, 0);
             this.BackColor = Color.FromArgb(redValue, greenValue, blueValue);
         }
         private void numericUpDownBlue_ValueChanged(object sender, EventArgs e)
@@ -28,6 +28,36 @@ namespace FirstApp
             greenValue = (int)numericUpDownGreen.Value;
             pictureBoxGreen.BackColor = Color.FromArgb(0, greenValue, 0);
             this.BackColor = Color.FromArgb(redValue, greenValue, blueValue);
+        }
+
+        private void trackBarRed_Scroll(object sender, EventArgs e)
+        {
+            numericUpDownRed.Value = trackBarRed.Value;
+        }
+
+        private void trackBarGreen_Scroll(object sender, EventArgs e)
+        {
+            numericUpDownGreen.Value = trackBarGreen.Value;
+        }
+
+        private void trackBarBlue_Scroll(object sender, EventArgs e)
+        {
+            numericUpDownBlue.Value = trackBarBlue.Value;
+        }
+
+        private void buttonRandomRed_Click(object sender, EventArgs e)
+        {
+            numericUpDownRed.Value = rand.Next(255);
+        }
+
+        private void buttonRandomGreen_Click(object sender, EventArgs e)
+        {
+            numericUpDownGreen.Value = rand.Next(255);
+        }
+
+        private void buttonRandomBlue_Click(object sender, EventArgs e)
+        {
+            numericUpDownBlue.Value = rand.Next(255);
         }
     }
 }

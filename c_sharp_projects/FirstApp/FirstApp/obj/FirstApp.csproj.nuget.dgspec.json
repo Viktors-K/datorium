@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj": {}
+    "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj": {}
   },
   "projects": {
-    "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj": {
+    "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj",
+        "projectUniqueName": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj",
         "projectName": "FirstApp",
-        "projectPath": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj",
-        "packagesPath": "C:\\Users\\vvkocetoks\\.nuget\\packages\\",
-        "outputPath": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\obj\\",
+        "projectPath": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\FirstApp.csproj",
+        "packagesPath": "C:\\Users\\Viktors\\.nuget\\packages\\",
+        "outputPath": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\FirstApp\\FirstApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vvkocetoks\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Viktors\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -50,6 +50,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.26, 6.0.26]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -58,7 +76,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
