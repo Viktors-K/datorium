@@ -43,7 +43,35 @@ namespace datoru_komponentes
 
         private void buttonViewSelect_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (komponente == null)
+                {
+                    MessageBox.Show("Nederîga komponente!");
+                }
+                else if (String.IsNullOrEmpty(komponente.Veids))
+                {
+                    MessageBox.Show("Nederîga komponente!");
+                }
+                else if (String.IsNullOrEmpty(komponente.Modelis))
+                {
+                    MessageBox.Show("Nederîga komponente!");
+                }
+                else if (String.IsNullOrEmpty(komponente.Cena.ToString()))
+                {
+                    MessageBox.Show("Nederîga komponente!");
+                }
+                else
+                {
+                    comboBoxViewType.SelectedItem = komponente.Veids;
+                    textBoxViewName.Text = komponente.Modelis;
+                    textBoxViewPrice.Text = komponente.Cena.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Notikusi kïûda!");
+            }
         }
 
         private void comboBoxViewType_SelectedIndexChanged(object sender, EventArgs e)
