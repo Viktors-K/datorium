@@ -38,7 +38,20 @@ namespace datoru_komponentes
 
         private void buttonViewEdit_Click(object sender, EventArgs e)
         {
+            try
+            {
+                StreamWriter writer = new StreamWriter("komponentes.txt");
+                writer.WriteLine("-Datora komponente-");
+                writer.WriteLine($"Veids: {komponente.Veids}");
+                writer.WriteLine($"Modelis: {komponente.Modelis}");
+                writer.WriteLine($"Cena: {komponente.Cena.ToString()} EUR");
+                writer.Close();
 
+                MessageBox.Show("Komponente saglabâta datnç!");
+            } catch (Exception ex)
+            {
+                MessageBox.Show($"Saglabâjot radâs kïûda!");
+            }
         }
 
         private void buttonViewSelect_Click(object sender, EventArgs e)

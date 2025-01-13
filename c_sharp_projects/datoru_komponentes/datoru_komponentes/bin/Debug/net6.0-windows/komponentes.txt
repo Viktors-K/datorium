@@ -1,0 +1,4 @@
+-Datora komponente-
+Veids: RAM
+Modelis: 2
+Cena: 12 EUR
