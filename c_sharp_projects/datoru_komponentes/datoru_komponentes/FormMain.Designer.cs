@@ -149,7 +149,7 @@
             buttonViewFileSave.TabIndex = 5;
             buttonViewFileSave.Text = "Saglabāt datus datnē";
             buttonViewFileSave.UseVisualStyleBackColor = true;
-            buttonViewFileSave.Click += buttonViewEdit_Click;
+            buttonViewFileSave.Click += buttonViewFileSave_Click;
             // 
             // buttonViewEdit
             // 

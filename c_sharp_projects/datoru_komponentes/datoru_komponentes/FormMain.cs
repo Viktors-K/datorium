@@ -40,17 +40,33 @@ namespace datoru_komponentes
         {
             try
             {
-                StreamWriter writer = new StreamWriter("komponentes.txt");
-                writer.WriteLine("-Datora komponente-");
-                writer.WriteLine($"Veids: {komponente.Veids}");
-                writer.WriteLine($"Modelis: {komponente.Modelis}");
-                writer.WriteLine($"Cena: {komponente.Cena.ToString()} EUR");
-                writer.Close();
-
-                MessageBox.Show("Komponente saglabâta datnç!");
-            } catch (Exception ex)
+                if (komponente == null)
+                {
+                    MessageBox.Show("Komponente vçl nav izveidota!");
+                }
+                else if (String.IsNullOrEmpty(comboBoxViewType.Text))
+                {
+                    MessageBox.Show("Veids nav izvçlçts!");
+                }
+                else if (String.IsNullOrEmpty(textBoxViewName.Text))
+                {
+                    MessageBox.Show("Nosaukums nav ievadîts!");
+                }
+                else if (String.IsNullOrEmpty(textBoxViewPrice.Text))
+                {
+                    MessageBox.Show("Cena nav ievadîta!");
+                }
+                else
+                {
+                    komponente.Veids = comboBoxViewType.SelectedItem.ToString();
+                    komponente.Modelis = textBoxViewName.Text;
+                    komponente.Cena = Convert.ToDouble(textBoxViewPrice.Text);
+                    MessageBox.Show("Komponente rediìçta!");
+                }
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show($"Saglabâjot radâs kïûda!");
+                MessageBox.Show("Notikusi kïûda!");
             }
         }
 
@@ -94,7 +110,7 @@ namespace datoru_komponentes
 
         private void buttonCompAdd_Click(object sender, EventArgs e)
         {
-            try 
+            try
             {
                 if (String.IsNullOrEmpty(comboBoxCompType.Text))
                 {
@@ -117,11 +133,31 @@ namespace datoru_komponentes
                     );
                     MessageBox.Show("Komponente pievienota!");
                 }
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Notikusi kïûda!");
             }
 
+        }
+
+        private void buttonViewFileSave_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                StreamWriter writer = new StreamWriter("komponentes.txt");
+                writer.WriteLine("-Datora komponente-");
+                writer.WriteLine($"Veids: {komponente.Veids}");
+                writer.WriteLine($"Modelis: {komponente.Modelis}");
+                writer.WriteLine($"Cena: {komponente.Cena.ToString()} EUR");
+                writer.Close();
+
+                MessageBox.Show("Komponente saglabâta datnç!");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Saglabâjot radâs kïûda!gir");
+            }
         }
     }
     public class Komponente
