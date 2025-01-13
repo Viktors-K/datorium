@@ -1,13 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dma9LXSYws/SRoESOXHA6iVlVIZcKErSDjnzE3LAeWkPq1JxsI1XD1Mh4EA2wnN3Lvmf1KRglymGwzroVIOupg==",
+  "dgSpecHash": "eAux9G7jLe5aCjNdpLVxFTJyqZ8cF7/YVPb1/IbXC7x3pvlY+eKRgnJwPdaFQl0Y2mQuo2uy930fz8P7XueqyQ==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\datoru_komponentes.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.26\\microsoft.windowsdesktop.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.26\\microsoft.netcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.26\\microsoft.aspnetcore.app.ref.6.0.26.nupkg.sha512",
-    "C:\\Users\\Viktors\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.26\\microsoft.netcore.app.host.win-x64.6.0.26.nupkg.sha512"
-  ],
+  "projectFilePath": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\datoru_komponentes.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

@@ -57,10 +57,11 @@
             // 
             tabControlMain.Controls.Add(tabPageView);
             tabControlMain.Controls.Add(tabPageAdd);
-            tabControlMain.Location = new Point(12, 12);
+            tabControlMain.Location = new Point(14, 16);
+            tabControlMain.Margin = new Padding(3, 4, 3, 4);
             tabControlMain.Name = "tabControlMain";
             tabControlMain.SelectedIndex = 0;
-            tabControlMain.Size = new Size(476, 321);
+            tabControlMain.Size = new Size(544, 428);
             tabControlMain.TabIndex = 0;
             // 
             // tabPageView
@@ -75,10 +76,11 @@
             tabPageView.Controls.Add(buttonViewEdit);
             tabPageView.Controls.Add(buttonViewSelect);
             tabPageView.Controls.Add(comboBoxViewName);
-            tabPageView.Location = new Point(4, 24);
+            tabPageView.Location = new Point(4, 29);
+            tabPageView.Margin = new Padding(3, 4, 3, 4);
             tabPageView.Name = "tabPageView";
-            tabPageView.Padding = new Padding(3);
-            tabPageView.Size = new Size(468, 293);
+            tabPageView.Padding = new Padding(3, 4, 3, 4);
+            tabPageView.Size = new Size(536, 395);
             tabPageView.TabIndex = 0;
             tabPageView.Text = "Skatīt komponentes";
             tabPageView.UseVisualStyleBackColor = true;
@@ -87,57 +89,63 @@
             // labelViewPrice
             // 
             labelViewPrice.AutoSize = true;
-            labelViewPrice.Location = new Point(18, 168);
+            labelViewPrice.Location = new Point(21, 224);
             labelViewPrice.Name = "labelViewPrice";
-            labelViewPrice.Size = new Size(34, 15);
+            labelViewPrice.Size = new Size(42, 20);
             labelViewPrice.TabIndex = 9;
             labelViewPrice.Text = "Cena";
             // 
             // labelViewType
             // 
             labelViewType.AutoSize = true;
-            labelViewType.Location = new Point(18, 80);
+            labelViewType.Location = new Point(21, 107);
             labelViewType.Name = "labelViewType";
-            labelViewType.Size = new Size(34, 15);
+            labelViewType.Size = new Size(44, 20);
             labelViewType.TabIndex = 10;
             labelViewType.Text = "Veids";
             // 
             // labelViewName
             // 
             labelViewName.AutoSize = true;
-            labelViewName.Location = new Point(18, 124);
+            labelViewName.Location = new Point(21, 165);
             labelViewName.Name = "labelViewName";
-            labelViewName.Size = new Size(70, 15);
+            labelViewName.Size = new Size(85, 20);
             labelViewName.TabIndex = 11;
             labelViewName.Text = "Nosaukums";
             // 
             // textBoxViewPrice
             // 
-            textBoxViewPrice.Location = new Point(18, 186);
+            textBoxViewPrice.Location = new Point(21, 248);
+            textBoxViewPrice.Margin = new Padding(3, 4, 3, 4);
             textBoxViewPrice.Name = "textBoxViewPrice";
-            textBoxViewPrice.Size = new Size(179, 23);
+            textBoxViewPrice.Size = new Size(204, 27);
             textBoxViewPrice.TabIndex = 8;
             // 
             // comboBoxViewType
             // 
+            comboBoxViewType.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxViewType.FormattingEnabled = true;
-            comboBoxViewType.Location = new Point(18, 98);
+            comboBoxViewType.Location = new Point(21, 131);
+            comboBoxViewType.Margin = new Padding(3, 4, 3, 4);
             comboBoxViewType.Name = "comboBoxViewType";
-            comboBoxViewType.Size = new Size(179, 23);
+            comboBoxViewType.Size = new Size(204, 28);
             comboBoxViewType.TabIndex = 7;
+            comboBoxViewType.SelectedIndexChanged += comboBoxViewType_SelectedIndexChanged;
             // 
             // textBoxViewName
             // 
-            textBoxViewName.Location = new Point(18, 142);
+            textBoxViewName.Location = new Point(21, 189);
+            textBoxViewName.Margin = new Padding(3, 4, 3, 4);
             textBoxViewName.Name = "textBoxViewName";
-            textBoxViewName.Size = new Size(179, 23);
+            textBoxViewName.Size = new Size(204, 27);
             textBoxViewName.TabIndex = 6;
             // 
             // buttonViewFileSave
             // 
-            buttonViewFileSave.Location = new Point(297, 142);
+            buttonViewFileSave.Location = new Point(339, 189);
+            buttonViewFileSave.Margin = new Padding(3, 4, 3, 4);
             buttonViewFileSave.Name = "buttonViewFileSave";
-            buttonViewFileSave.Size = new Size(139, 23);
+            buttonViewFileSave.Size = new Size(159, 31);
             buttonViewFileSave.TabIndex = 5;
             buttonViewFileSave.Text = "Saglabāt datus datnē";
             buttonViewFileSave.UseVisualStyleBackColor = true;
@@ -145,19 +153,21 @@
             // 
             // buttonViewEdit
             // 
-            buttonViewEdit.Location = new Point(36, 215);
+            buttonViewEdit.Location = new Point(41, 287);
+            buttonViewEdit.Margin = new Padding(3, 4, 3, 4);
             buttonViewEdit.Name = "buttonViewEdit";
-            buttonViewEdit.Size = new Size(139, 26);
+            buttonViewEdit.Size = new Size(159, 35);
             buttonViewEdit.TabIndex = 5;
-            buttonViewEdit.Text = "Pievienot komponenti";
+            buttonViewEdit.Text = "Rediģēt";
             buttonViewEdit.UseVisualStyleBackColor = true;
             buttonViewEdit.Click += buttonViewEdit_Click;
             // 
             // buttonViewSelect
             // 
-            buttonViewSelect.Location = new Point(297, 23);
+            buttonViewSelect.Location = new Point(339, 31);
+            buttonViewSelect.Margin = new Padding(3, 4, 3, 4);
             buttonViewSelect.Name = "buttonViewSelect";
-            buttonViewSelect.Size = new Size(75, 23);
+            buttonViewSelect.Size = new Size(86, 31);
             buttonViewSelect.TabIndex = 1;
             buttonViewSelect.Text = "Apskatīt";
             buttonViewSelect.UseVisualStyleBackColor = true;
@@ -166,9 +176,10 @@
             // comboBoxViewName
             // 
             comboBoxViewName.FormattingEnabled = true;
-            comboBoxViewName.Location = new Point(62, 23);
+            comboBoxViewName.Location = new Point(71, 31);
+            comboBoxViewName.Margin = new Padding(3, 4, 3, 4);
             comboBoxViewName.Name = "comboBoxViewName";
-            comboBoxViewName.Size = new Size(199, 23);
+            comboBoxViewName.Size = new Size(227, 28);
             comboBoxViewName.TabIndex = 0;
             comboBoxViewName.DropDownClosed += comboBoxViewName_DropDownClosed;
             // 
@@ -181,10 +192,11 @@
             tabPageAdd.Controls.Add(comboBoxCompType);
             tabPageAdd.Controls.Add(textBoxCompName);
             tabPageAdd.Controls.Add(buttonCompAdd);
-            tabPageAdd.Location = new Point(4, 24);
+            tabPageAdd.Location = new Point(4, 29);
+            tabPageAdd.Margin = new Padding(3, 4, 3, 4);
             tabPageAdd.Name = "tabPageAdd";
-            tabPageAdd.Padding = new Padding(3);
-            tabPageAdd.Size = new Size(468, 293);
+            tabPageAdd.Padding = new Padding(3, 4, 3, 4);
+            tabPageAdd.Size = new Size(536, 395);
             tabPageAdd.TabIndex = 1;
             tabPageAdd.Text = "Pievienot komponentes";
             tabPageAdd.UseVisualStyleBackColor = true;
@@ -192,9 +204,9 @@
             // labelCompPrice
             // 
             labelCompPrice.AutoSize = true;
-            labelCompPrice.Location = new Point(34, 151);
+            labelCompPrice.Location = new Point(39, 201);
             labelCompPrice.Name = "labelCompPrice";
-            labelCompPrice.Size = new Size(34, 15);
+            labelCompPrice.Size = new Size(42, 20);
             labelCompPrice.TabIndex = 4;
             labelCompPrice.Text = "Cena";
             labelCompPrice.Click += label1_Click;
@@ -202,9 +214,9 @@
             // labelCompType
             // 
             labelCompType.AutoSize = true;
-            labelCompType.Location = new Point(34, 63);
+            labelCompType.Location = new Point(39, 84);
             labelCompType.Name = "labelCompType";
-            labelCompType.Size = new Size(34, 15);
+            labelCompType.Size = new Size(44, 20);
             labelCompType.TabIndex = 4;
             labelCompType.Text = "Veids";
             labelCompType.Click += label1_Click;
@@ -212,52 +224,59 @@
             // labelCompName
             // 
             labelCompName.AutoSize = true;
-            labelCompName.Location = new Point(34, 107);
+            labelCompName.Location = new Point(39, 143);
             labelCompName.Name = "labelCompName";
-            labelCompName.Size = new Size(70, 15);
+            labelCompName.Size = new Size(85, 20);
             labelCompName.TabIndex = 4;
             labelCompName.Text = "Nosaukums";
             labelCompName.Click += label1_Click;
             // 
             // textBoxCompPrice
             // 
-            textBoxCompPrice.Location = new Point(34, 169);
+            textBoxCompPrice.Location = new Point(39, 225);
+            textBoxCompPrice.Margin = new Padding(3, 4, 3, 4);
             textBoxCompPrice.Name = "textBoxCompPrice";
-            textBoxCompPrice.Size = new Size(179, 23);
+            textBoxCompPrice.Size = new Size(204, 27);
             textBoxCompPrice.TabIndex = 3;
             // 
             // comboBoxCompType
             // 
+            comboBoxCompType.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCompType.FormattingEnabled = true;
-            comboBoxCompType.Location = new Point(34, 81);
+            comboBoxCompType.Location = new Point(39, 108);
+            comboBoxCompType.Margin = new Padding(3, 4, 3, 4);
             comboBoxCompType.Name = "comboBoxCompType";
-            comboBoxCompType.Size = new Size(179, 23);
+            comboBoxCompType.Size = new Size(204, 28);
             comboBoxCompType.TabIndex = 2;
             comboBoxCompType.SelectedIndexChanged += comboBoxCompType_SelectedIndexChanged;
             // 
             // textBoxCompName
             // 
-            textBoxCompName.Location = new Point(34, 125);
+            textBoxCompName.Location = new Point(39, 167);
+            textBoxCompName.Margin = new Padding(3, 4, 3, 4);
             textBoxCompName.Name = "textBoxCompName";
-            textBoxCompName.Size = new Size(179, 23);
+            textBoxCompName.Size = new Size(204, 27);
             textBoxCompName.TabIndex = 1;
             textBoxCompName.TextChanged += textBoxCompName_TextChanged;
             // 
             // buttonCompAdd
             // 
-            buttonCompAdd.Location = new Point(52, 198);
+            buttonCompAdd.Location = new Point(59, 264);
+            buttonCompAdd.Margin = new Padding(3, 4, 3, 4);
             buttonCompAdd.Name = "buttonCompAdd";
-            buttonCompAdd.Size = new Size(139, 26);
+            buttonCompAdd.Size = new Size(159, 35);
             buttonCompAdd.TabIndex = 0;
             buttonCompAdd.Text = "Pievienot komponenti";
             buttonCompAdd.UseVisualStyleBackColor = true;
+            buttonCompAdd.Click += buttonCompAdd_Click;
             // 
             // FormMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(500, 345);
+            ClientSize = new Size(571, 460);
             Controls.Add(tabControlMain);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "FormMain";
             Text = "Form1";
             tabControlMain.ResumeLayout(false);

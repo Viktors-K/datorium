@@ -15,3 +15,19 @@ D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_
 D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.pdb
 D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.genruntimeconfig.cache
 D:\Programming\Repositories\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\ref\datoru_komponentes.dll
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.exe
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.deps.json
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.runtimeconfig.json
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.dll
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\bin\Debug\net6.0-windows\datoru_komponentes.pdb
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.FormMain.resources
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.csproj.GenerateResource.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.GeneratedMSBuildEditorConfig.editorconfig
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.AssemblyInfoInputs.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.AssemblyInfo.cs
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.csproj.CoreCompileInputs.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.dll
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\refint\datoru_komponentes.dll
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.pdb
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\datoru_komponentes.genruntimeconfig.cache
+\\ri.riga.lv\rvvg\Audzekni\vvkocetoks\My Documents\GitHub\datorium\c_sharp_projects\datoru_komponentes\datoru_komponentes\obj\Debug\net6.0-windows\ref\datoru_komponentes.dll

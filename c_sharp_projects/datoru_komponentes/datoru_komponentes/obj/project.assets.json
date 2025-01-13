@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Viktors\\.nuget\\packages\\": {}
+    "C:\\Users\\vvkocetoks\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\datoru_komponentes.csproj",
+      "projectUniqueName": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\datoru_komponentes.csproj",
       "projectName": "datoru_komponentes",
-      "projectPath": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\datoru_komponentes.csproj",
-      "packagesPath": "C:\\Users\\Viktors\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\Repositories\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\obj\\",
+      "projectPath": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\datoru_komponentes.csproj",
+      "packagesPath": "C:\\Users\\vvkocetoks\\.nuget\\packages\\",
+      "outputPath": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\datoru_komponentes\\datoru_komponentes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Viktors\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vvkocetoks\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -56,24 +56,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.26, 6.0.26]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -82,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
