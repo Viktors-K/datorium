@@ -169,6 +169,7 @@
             buttonProductAdd.TabIndex = 3;
             buttonProductAdd.Text = "Pievienot";
             buttonProductAdd.UseVisualStyleBackColor = true;
+            buttonProductAdd.Click += buttonProductAdd_Click;
             // 
             // buttonProductRead
             // 
