@@ -1,0 +1,81 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2BC29DB3-C8CF-4270-84B6-3B39CEF06AFD}|mebelu_veikals\\mebelu_veikals.csproj|\\\\ri.riga.lv\\rvvg\\audzekni\\vvkocetoks\\my documents\\github\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BC29DB3-C8CF-4270-84B6-3B39CEF06AFD}|mebelu_veikals\\mebelu_veikals.csproj|\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BC29DB3-C8CF-4270-84B6-3B39CEF06AFD}|mebelu_veikals\\mebelu_veikals.csproj|\\\\ri.riga.lv\\rvvg\\audzekni\\vvkocetoks\\my documents\\github\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\furnituremanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BC29DB3-C8CF-4270-84B6-3B39CEF06AFD}|mebelu_veikals\\mebelu_veikals.csproj|\\\\ri.riga.lv\\rvvg\\audzekni\\vvkocetoks\\my documents\\github\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FurnitureManager.cs",
+              "DocumentMoniker": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\FurnitureManager.cs",
+              "RelativeDocumentMoniker": "mebelu_veikals\\FurnitureManager.cs",
+              "ToolTip": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\FurnitureManager.cs",
+              "RelativeToolTip": "mebelu_veikals\\FurnitureManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:31:33.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Program.cs",
+              "RelativeDocumentMoniker": "mebelu_veikals\\Program.cs",
+              "ToolTip": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Program.cs",
+              "RelativeToolTip": "mebelu_veikals\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:31:33.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Form1.cs",
+              "RelativeDocumentMoniker": "mebelu_veikals\\Form1.cs",
+              "ToolTip": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Form1.cs [Design]",
+              "RelativeToolTip": "mebelu_veikals\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:31:33.653Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Form1.cs",
+              "RelativeDocumentMoniker": "mebelu_veikals\\Form1.cs",
+              "ToolTip": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Form1.cs",
+              "RelativeToolTip": "mebelu_veikals\\Form1.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T12:31:33.658Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
