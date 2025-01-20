@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("mebelu_veikals")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77c1b56e1c60183d3bee2d3a6758875a0e105376")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4463936b02e35e9c04915ff4a0428e455fbac7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("mebelu_veikals")]
 [assembly: System.Reflection.AssemblyTitleAttribute("mebelu_veikals")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

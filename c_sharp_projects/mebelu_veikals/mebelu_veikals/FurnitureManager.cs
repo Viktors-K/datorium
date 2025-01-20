@@ -76,5 +76,30 @@ namespace mebelu_veikals
                 return items;
             }
         }
+        public Furniture GetItemFromTable(string name)
+        {
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                Furniture furniture_item = null;
+                connection.Open();
+                var selectCmd = connection.CreateCommand();
+                selectCmd.CommandText = "SELECT * FROM FURNITURE WHERE Name = @name";
+                selectCmd.Parameters.AddWithValue("@name", name);
+                var reader = selectCmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    furniture_item = new Furniture(
+                            name: Convert.ToString(reader["Name"]),
+                            price: Convert.ToDouble(reader["Price"]),
+                            description: Convert.ToString(reader["Description"]),
+                            length: Convert.ToInt32(reader["Length"]),
+                            width: Convert.ToInt32(reader["Width"]),
+                            height: Convert.ToInt32(reader["Height"])
+                        );
+                }
+                connection.Close();
+                return furniture_item;
+            }
+        }
     }
 }

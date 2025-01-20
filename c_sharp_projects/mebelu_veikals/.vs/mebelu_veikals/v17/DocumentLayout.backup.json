@@ -22,12 +22,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -36,9 +32,10 @@
               "RelativeDocumentMoniker": "mebelu_veikals\\FurnitureManager.cs",
               "ToolTip": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\FurnitureManager.cs",
               "RelativeToolTip": "mebelu_veikals\\FurnitureManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAADMAAAAJAAAA",
+              "ViewState": "AgIAAE0AAAAAAAAAAADwv14AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:31:33.434Z"
+              "WhenOpened": "2025-01-15T12:31:33.434Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -48,9 +45,10 @@
               "RelativeDocumentMoniker": "mebelu_veikals\\Program.cs",
               "ToolTip": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Program.cs",
               "RelativeToolTip": "mebelu_veikals\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAMAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T12:31:33.648Z"
+              "WhenOpened": "2025-01-15T12:31:33.648Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,7 +70,7 @@
               "RelativeDocumentMoniker": "mebelu_veikals\\Form1.cs",
               "ToolTip": "\\\\ri.riga.lv\\rvvg\\Audzekni\\vvkocetoks\\My Documents\\GitHub\\datorium\\c_sharp_projects\\mebelu_veikals\\mebelu_veikals\\Form1.cs",
               "RelativeToolTip": "mebelu_veikals\\Form1.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAqwBoAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAEAAAAAAAAAAAIAwwFkAAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T12:31:33.658Z",
               "EditorCaption": ""

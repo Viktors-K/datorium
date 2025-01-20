@@ -78,6 +78,17 @@ namespace mebelu_veikals
                 }
             }
         }
+
+        private void buttonProductRead_Click(object sender, EventArgs e)
+        {
+            Furniture current_furniture = furnitureManager.GetItemFromTable(comboBoxProductSelect.Text);
+            textBoxProductName.Text = current_furniture.Name;
+            textBoxProductPrice.Text = Convert.ToString(current_furniture.Price);
+            textBoxProductDesc.Text = current_furniture.Description;
+            textBoxProductLength.Text = Convert.ToString(current_furniture.Length);
+            textBoxProductWidth.Text = Convert.ToString(current_furniture.Width);
+            textBoxProductHeight.Text = Convert.ToString(current_furniture.Height);
+        }
     }
 
 }
