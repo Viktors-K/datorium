@@ -49,7 +49,6 @@
             labelCsvText = new Label();
             buttonCsvImport = new Button();
             buttonCsvExport = new Button();
-            labelCsvPath = new Label();
             openFileDialogCsv = new OpenFileDialog();
             saveFileDialogCsv = new SaveFileDialog();
             SuspendLayout();
@@ -236,15 +235,6 @@
             buttonCsvExport.UseVisualStyleBackColor = true;
             buttonCsvExport.Click += buttonCsvExport_Click;
             // 
-            // labelCsvPath
-            // 
-            labelCsvPath.AutoSize = true;
-            labelCsvPath.Location = new Point(12, 277);
-            labelCsvPath.Name = "labelCsvPath";
-            labelCsvPath.Size = new Size(82, 15);
-            labelCsvPath.TabIndex = 0;
-            labelCsvPath.Text = "Tiks saglabāts:";
-            // 
             // openFileDialogCsv
             // 
             openFileDialogCsv.FileName = "import.csv";
@@ -262,7 +252,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(493, 299);
+            ClientSize = new Size(493, 283);
             Controls.Add(buttonProductDelete);
             Controls.Add(buttonProductRead);
             Controls.Add(buttonProductEdit);
@@ -278,7 +268,6 @@
             Controls.Add(comboBoxProductSelect);
             Controls.Add(labelProductHeight);
             Controls.Add(labelProductWidth);
-            Controls.Add(labelCsvPath);
             Controls.Add(labelCsvText);
             Controls.Add(labelProductLength);
             Controls.Add(labelProductDesc);
@@ -287,6 +276,7 @@
             Controls.Add(labelProductSelect);
             Name = "Form1";
             Text = "Mēbeļu veikals";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -314,7 +304,6 @@
         private Label labelCsvText;
         private Button buttonCsvImport;
         private Button buttonCsvExport;
-        private Label labelCsvPath;
         private OpenFileDialog openFileDialogCsv;
         private SaveFileDialog saveFileDialogCsv;
     }

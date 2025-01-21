@@ -176,11 +176,39 @@ namespace mebelu_veikals
         {
             if (saveFileDialogCsv.ShowDialog() == DialogResult.OK)
             {
-
+                List<String> export_rows = furnitureManager.GetAllRowsFromTable();
+                string filePath = saveFileDialogCsv.FileName;
+                try
+                {
+                    File.WriteAllLines(filePath, export_rows);
+                    MessageBox.Show("Dati saglabāti CSV datnē.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Kļūda rakstot CSV failu!", "Kļūda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
         private void openFileDialogCsv_FileOk(object sender, CancelEventArgs e)
+        {
+            if (openFileDialogCsv.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    string filePath = saveFileDialogCsv.FileName;
+                    List<string> rows = new List<string>(File.ReadAllLines(filePath));
+                    furnitureManager.AddDataFromCSV(rows);
+                    MessageBox.Show("Dati veiksmīgi pievienoti datubāzei.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Kļūda importējot CSV failu!", "Kļūda", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

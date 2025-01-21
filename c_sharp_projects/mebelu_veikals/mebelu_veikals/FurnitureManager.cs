@@ -143,5 +143,44 @@ namespace mebelu_veikals
                 connection.Close();
             }
         }
+        public List<String> GetAllRowsFromTable()
+        {
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                List<String> rows = new List<String>();
+                connection.Open();
+                var readCmd = connection.CreateCommand();
+                readCmd.CommandText = @"SELECT * FROM Furniture;";
+                var reader = readCmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    string row = $"{reader["Id"]},{reader["Name"]},{reader["Price"]},{reader["Description"]},{reader["Length"]},{reader["Width"]},{reader["Height"]}";
+                    rows.Add(row);
+                }
+                connection.Close();
+                return rows;
+            }
+        }
+        public void AddDataFromCSV(List<String> rows)
+        {
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                connection.Open();
+                for (int i = 0; i < rows.Count; i++)
+                {
+                    string[] row_values = rows[i].Split(',');
+                    var insertCmd = connection.CreateCommand();
+                    insertCmd.CommandText = "INSERT INTO Furniture(Name, Price, Description, Length, Width, Height) VALUES (@name, @price, @desc, @length, @width, @height)";
+                    insertCmd.Parameters.AddWithValue("@name", row_values[1]);
+                    insertCmd.Parameters.AddWithValue("@price", row_values[2]);
+                    insertCmd.Parameters.AddWithValue("@desc", row_values[3]);
+                    insertCmd.Parameters.AddWithValue("@length", row_values[4]);
+                    insertCmd.Parameters.AddWithValue("@width", row_values[5]);
+                    insertCmd.Parameters.AddWithValue("@height", row_values[6]);
+                    insertCmd.ExecuteNonQuery();
+                }
+                connection.Close();
+            }
+        }
     }
 }
