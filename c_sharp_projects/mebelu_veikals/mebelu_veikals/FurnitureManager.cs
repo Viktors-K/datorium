@@ -101,5 +101,32 @@ namespace mebelu_veikals
                 return furniture_item;
             }
         }
+        public void UpdateItemFromTable(string old_name, Furniture new_furniture)
+        {
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                connection.Open();
+                var updateCmd = connection.CreateCommand();
+                updateCmd.CommandText = @"
+					UPDATE Furniture SET
+                        Name = @name,
+                        Price = @price,
+                        Description = @desc,
+                        Length = @length,
+                        Width = @width,
+                        Height = @height
+                    WHERE name = @old_name;
+				";
+                updateCmd.Parameters.AddWithValue("@old_name", old_name);
+                updateCmd.Parameters.AddWithValue("@name", new_furniture.Name);
+                updateCmd.Parameters.AddWithValue("@price", new_furniture.Price);
+                updateCmd.Parameters.AddWithValue("@desc", new_furniture.Description);
+                updateCmd.Parameters.AddWithValue("@length", new_furniture.Length);
+                updateCmd.Parameters.AddWithValue("@width", new_furniture.Width);
+                updateCmd.Parameters.AddWithValue("@height", new_furniture.Height);
+                updateCmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
     }
 }

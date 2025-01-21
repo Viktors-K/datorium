@@ -89,6 +89,56 @@ namespace mebelu_veikals
             textBoxProductWidth.Text = Convert.ToString(current_furniture.Width);
             textBoxProductHeight.Text = Convert.ToString(current_furniture.Height);
         }
+
+        private void buttonProductEdit_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(textBoxProductName.Text))
+            {
+                MessageBox.Show("Nav ievadīts nosaukums!");
+            }
+            else if (string.IsNullOrEmpty(textBoxProductPrice.Text))
+            {
+                MessageBox.Show("Nav ievadīta cena!");
+            }
+            else if (string.IsNullOrEmpty(textBoxProductDesc.Text))
+            {
+                MessageBox.Show("Nav ievadīts apraksts!");
+            }
+            else if (string.IsNullOrEmpty(textBoxProductLength.Text))
+            {
+                MessageBox.Show("Nav ievadīts garums!");
+            }
+            else if (string.IsNullOrEmpty(textBoxProductWidth.Text))
+            {
+                MessageBox.Show("Nav ievadīts platums!");
+            }
+            else if (string.IsNullOrEmpty(textBoxProductHeight.Text))
+            {
+                MessageBox.Show("Nav ievadīts augstums!");
+            }
+            else
+            {
+                Furniture item = new Furniture(
+                    name: textBoxProductName.Text,
+                    price: Convert.ToDouble(textBoxProductPrice.Text),
+                    description: textBoxProductDesc.Text,
+                    length: Convert.ToInt32(textBoxProductLength.Text),
+                    width: Convert.ToInt32(textBoxProductWidth.Text),
+                    height: Convert.ToInt32(textBoxProductHeight.Text)
+                );
+                try
+                {
+                    furnitureManager.UpdateItemFromTable(comboBoxProductSelect.Text,item);
+                    UpdateCombobox();
+                    MessageBox.Show("Ieraksts atjaunots.");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Notikusi kļūda!");
+                }
+            }
+        
+        }
     }
 
 }

@@ -51,129 +51,121 @@
             // labelProductSelect
             // 
             labelProductSelect.AutoSize = true;
-            labelProductSelect.Location = new Point(14, 12);
+            labelProductSelect.Location = new Point(12, 9);
             labelProductSelect.Name = "labelProductSelect";
-            labelProductSelect.Size = new Size(94, 20);
+            labelProductSelect.Size = new Size(73, 15);
             labelProductSelect.TabIndex = 0;
             labelProductSelect.Text = "Izvēlies preci";
             // 
             // comboBoxProductSelect
             // 
             comboBoxProductSelect.FormattingEnabled = true;
-            comboBoxProductSelect.Location = new Point(14, 36);
-            comboBoxProductSelect.Margin = new Padding(3, 4, 3, 4);
+            comboBoxProductSelect.Location = new Point(12, 27);
             comboBoxProductSelect.Name = "comboBoxProductSelect";
-            comboBoxProductSelect.Size = new Size(349, 28);
+            comboBoxProductSelect.Size = new Size(306, 23);
             comboBoxProductSelect.TabIndex = 1;
             // 
             // textBoxProductName
             // 
-            textBoxProductName.Location = new Point(14, 129);
-            textBoxProductName.Margin = new Padding(3, 4, 3, 4);
+            textBoxProductName.Location = new Point(12, 97);
             textBoxProductName.Name = "textBoxProductName";
-            textBoxProductName.Size = new Size(171, 27);
+            textBoxProductName.Size = new Size(150, 23);
             textBoxProductName.TabIndex = 2;
             // 
             // labelProductName
             // 
             labelProductName.AutoSize = true;
-            labelProductName.Location = new Point(14, 105);
+            labelProductName.Location = new Point(12, 79);
             labelProductName.Name = "labelProductName";
-            labelProductName.Size = new Size(85, 20);
+            labelProductName.Size = new Size(70, 15);
             labelProductName.TabIndex = 0;
             labelProductName.Text = "Nosaukums";
             // 
             // labelProductPrice
             // 
             labelProductPrice.AutoSize = true;
-            labelProductPrice.Location = new Point(192, 105);
+            labelProductPrice.Location = new Point(168, 79);
             labelProductPrice.Name = "labelProductPrice";
-            labelProductPrice.Size = new Size(42, 20);
+            labelProductPrice.Size = new Size(34, 15);
             labelProductPrice.TabIndex = 0;
             labelProductPrice.Text = "Cena";
             // 
             // textBoxProductPrice
             // 
-            textBoxProductPrice.Location = new Point(192, 129);
-            textBoxProductPrice.Margin = new Padding(3, 4, 3, 4);
+            textBoxProductPrice.Location = new Point(168, 97);
             textBoxProductPrice.Name = "textBoxProductPrice";
-            textBoxProductPrice.Size = new Size(171, 27);
+            textBoxProductPrice.Size = new Size(150, 23);
             textBoxProductPrice.TabIndex = 2;
             // 
             // labelProductDesc
             // 
             labelProductDesc.AutoSize = true;
-            labelProductDesc.Location = new Point(370, 105);
+            labelProductDesc.Location = new Point(324, 79);
             labelProductDesc.Name = "labelProductDesc";
-            labelProductDesc.Size = new Size(65, 20);
+            labelProductDesc.Size = new Size(52, 15);
             labelProductDesc.TabIndex = 0;
             labelProductDesc.Text = "Apraksts";
             // 
             // textBoxProductDesc
             // 
-            textBoxProductDesc.Location = new Point(370, 129);
-            textBoxProductDesc.Margin = new Padding(3, 4, 3, 4);
+            textBoxProductDesc.Location = new Point(324, 97);
             textBoxProductDesc.Name = "textBoxProductDesc";
-            textBoxProductDesc.Size = new Size(171, 27);
+            textBoxProductDesc.Size = new Size(150, 23);
             textBoxProductDesc.TabIndex = 2;
             // 
             // labelProductLength
             // 
             labelProductLength.AutoSize = true;
-            labelProductLength.Location = new Point(14, 164);
+            labelProductLength.Location = new Point(12, 123);
             labelProductLength.Name = "labelProductLength";
-            labelProductLength.Size = new Size(59, 20);
+            labelProductLength.Size = new Size(48, 15);
             labelProductLength.TabIndex = 0;
             labelProductLength.Text = "Garums";
             // 
             // textBoxProductLength
             // 
-            textBoxProductLength.Location = new Point(14, 188);
-            textBoxProductLength.Margin = new Padding(3, 4, 3, 4);
+            textBoxProductLength.Location = new Point(12, 141);
             textBoxProductLength.Name = "textBoxProductLength";
-            textBoxProductLength.Size = new Size(171, 27);
+            textBoxProductLength.Size = new Size(150, 23);
             textBoxProductLength.TabIndex = 2;
             // 
             // labelProductWidth
             // 
             labelProductWidth.AutoSize = true;
-            labelProductWidth.Location = new Point(192, 164);
+            labelProductWidth.Location = new Point(168, 123);
             labelProductWidth.Name = "labelProductWidth";
-            labelProductWidth.Size = new Size(61, 20);
+            labelProductWidth.Size = new Size(50, 15);
             labelProductWidth.TabIndex = 0;
             labelProductWidth.Text = "Platums";
             // 
             // textBoxProductWidth
             // 
-            textBoxProductWidth.Location = new Point(192, 188);
-            textBoxProductWidth.Margin = new Padding(3, 4, 3, 4);
+            textBoxProductWidth.Location = new Point(168, 141);
             textBoxProductWidth.Name = "textBoxProductWidth";
-            textBoxProductWidth.Size = new Size(171, 27);
+            textBoxProductWidth.Size = new Size(150, 23);
             textBoxProductWidth.TabIndex = 2;
             // 
             // labelProductHeight
             // 
             labelProductHeight.AutoSize = true;
-            labelProductHeight.Location = new Point(370, 164);
+            labelProductHeight.Location = new Point(324, 123);
             labelProductHeight.Name = "labelProductHeight";
-            labelProductHeight.Size = new Size(74, 20);
+            labelProductHeight.Size = new Size(61, 15);
             labelProductHeight.TabIndex = 0;
             labelProductHeight.Text = "Augstums";
             // 
             // textBoxProductHeight
             // 
-            textBoxProductHeight.Location = new Point(370, 188);
-            textBoxProductHeight.Margin = new Padding(3, 4, 3, 4);
+            textBoxProductHeight.Location = new Point(324, 141);
             textBoxProductHeight.Name = "textBoxProductHeight";
-            textBoxProductHeight.Size = new Size(171, 27);
+            textBoxProductHeight.Size = new Size(150, 23);
             textBoxProductHeight.TabIndex = 2;
             // 
             // buttonProductAdd
             // 
-            buttonProductAdd.Location = new Point(14, 267);
-            buttonProductAdd.Margin = new Padding(3, 4, 3, 4);
+            buttonProductAdd.Location = new Point(12, 200);
             buttonProductAdd.Name = "buttonProductAdd";
-            buttonProductAdd.Size = new Size(171, 31);
+            buttonProductAdd.Size = new Size(150, 23);
             buttonProductAdd.TabIndex = 3;
             buttonProductAdd.Text = "Pievienot";
             buttonProductAdd.UseVisualStyleBackColor = true;
@@ -181,10 +173,9 @@
             // 
             // buttonProductRead
             // 
-            buttonProductRead.Location = new Point(370, 36);
-            buttonProductRead.Margin = new Padding(3, 4, 3, 4);
+            buttonProductRead.Location = new Point(324, 27);
             buttonProductRead.Name = "buttonProductRead";
-            buttonProductRead.Size = new Size(171, 31);
+            buttonProductRead.Size = new Size(150, 23);
             buttonProductRead.TabIndex = 4;
             buttonProductRead.Text = "Atlasīt";
             buttonProductRead.UseVisualStyleBackColor = true;
@@ -192,29 +183,28 @@
             // 
             // buttonProductEdit
             // 
-            buttonProductEdit.Location = new Point(192, 267);
-            buttonProductEdit.Margin = new Padding(3, 4, 3, 4);
+            buttonProductEdit.Location = new Point(168, 200);
             buttonProductEdit.Name = "buttonProductEdit";
-            buttonProductEdit.Size = new Size(171, 31);
+            buttonProductEdit.Size = new Size(150, 23);
             buttonProductEdit.TabIndex = 3;
             buttonProductEdit.Text = "Rediģēt";
             buttonProductEdit.UseVisualStyleBackColor = true;
+            buttonProductEdit.Click += buttonProductEdit_Click;
             // 
             // buttonProductDelete
             // 
-            buttonProductDelete.Location = new Point(370, 267);
-            buttonProductDelete.Margin = new Padding(3, 4, 3, 4);
+            buttonProductDelete.Location = new Point(324, 200);
             buttonProductDelete.Name = "buttonProductDelete";
-            buttonProductDelete.Size = new Size(171, 31);
+            buttonProductDelete.Size = new Size(150, 23);
             buttonProductDelete.TabIndex = 4;
             buttonProductDelete.Text = "Dzēst";
             buttonProductDelete.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(563, 319);
+            ClientSize = new Size(493, 239);
             Controls.Add(buttonProductDelete);
             Controls.Add(buttonProductRead);
             Controls.Add(buttonProductEdit);
@@ -233,7 +223,6 @@
             Controls.Add(labelProductPrice);
             Controls.Add(labelProductName);
             Controls.Add(labelProductSelect);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             Text = "Mēbeļu veikals";
             ResumeLayout(false);
