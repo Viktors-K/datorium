@@ -128,7 +128,7 @@ namespace mebelu_veikals
                 );
                 try
                 {
-                    furnitureManager.UpdateItemFromTable(comboBoxProductSelect.Text,item);
+                    furnitureManager.UpdateItemFromTable(comboBoxProductSelect.Text, item);
                     UpdateCombobox();
                     MessageBox.Show("Ieraksts atjaunots.");
                 }
@@ -137,7 +137,21 @@ namespace mebelu_veikals
                     MessageBox.Show("Notikusi kļūda!");
                 }
             }
-        
+
+        }
+
+        private void buttonProductDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                furnitureManager.RemoveItemFromTable(comboBoxProductSelect.Text);
+                UpdateCombobox();
+                MessageBox.Show("Ieraksts dzēsts.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Notikusi kļūda!");
+            }
         }
     }
 

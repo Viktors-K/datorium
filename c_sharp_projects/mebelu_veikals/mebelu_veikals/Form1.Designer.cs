@@ -199,6 +199,7 @@
             buttonProductDelete.TabIndex = 4;
             buttonProductDelete.Text = "Dzēst";
             buttonProductDelete.UseVisualStyleBackColor = true;
+            buttonProductDelete.Click += buttonProductDelete_Click;
             // 
             // Form1
             // 

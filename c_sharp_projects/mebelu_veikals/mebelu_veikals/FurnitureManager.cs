@@ -128,5 +128,20 @@ namespace mebelu_veikals
                 connection.Close();
             }
         }
+        public void RemoveItemFromTable(string name)
+        {
+            using (var connection = new SqliteConnection(_connectionString))
+            {
+                connection.Open();
+                var updateCmd = connection.CreateCommand();
+                updateCmd.CommandText = @"
+					DELETE FROM Furniture
+                    WHERE name = @name;
+				";
+                updateCmd.Parameters.AddWithValue("@name", name);
+                updateCmd.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
     }
 }
