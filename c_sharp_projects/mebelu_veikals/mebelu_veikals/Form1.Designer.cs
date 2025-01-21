@@ -46,6 +46,12 @@
             buttonProductRead = new Button();
             buttonProductEdit = new Button();
             buttonProductDelete = new Button();
+            labelCsvText = new Label();
+            buttonCsvImport = new Button();
+            buttonCsvExport = new Button();
+            labelCsvPath = new Label();
+            openFileDialogCsv = new OpenFileDialog();
+            saveFileDialogCsv = new SaveFileDialog();
             SuspendLayout();
             // 
             // labelProductSelect
@@ -163,7 +169,7 @@
             // 
             // buttonProductAdd
             // 
-            buttonProductAdd.Location = new Point(12, 200);
+            buttonProductAdd.Location = new Point(12, 185);
             buttonProductAdd.Name = "buttonProductAdd";
             buttonProductAdd.Size = new Size(150, 23);
             buttonProductAdd.TabIndex = 3;
@@ -183,7 +189,7 @@
             // 
             // buttonProductEdit
             // 
-            buttonProductEdit.Location = new Point(168, 200);
+            buttonProductEdit.Location = new Point(168, 185);
             buttonProductEdit.Name = "buttonProductEdit";
             buttonProductEdit.Size = new Size(150, 23);
             buttonProductEdit.TabIndex = 3;
@@ -193,7 +199,7 @@
             // 
             // buttonProductDelete
             // 
-            buttonProductDelete.Location = new Point(324, 200);
+            buttonProductDelete.Location = new Point(324, 185);
             buttonProductDelete.Name = "buttonProductDelete";
             buttonProductDelete.Size = new Size(150, 23);
             buttonProductDelete.TabIndex = 4;
@@ -201,14 +207,67 @@
             buttonProductDelete.UseVisualStyleBackColor = true;
             buttonProductDelete.Click += buttonProductDelete_Click;
             // 
+            // labelCsvText
+            // 
+            labelCsvText.AutoSize = true;
+            labelCsvText.Location = new Point(12, 233);
+            labelCsvText.Name = "labelCsvText";
+            labelCsvText.Size = new Size(103, 15);
+            labelCsvText.TabIndex = 0;
+            labelCsvText.Text = "Datnes rediģēšana";
+            // 
+            // buttonCsvImport
+            // 
+            buttonCsvImport.Location = new Point(12, 251);
+            buttonCsvImport.Name = "buttonCsvImport";
+            buttonCsvImport.Size = new Size(150, 23);
+            buttonCsvImport.TabIndex = 3;
+            buttonCsvImport.Text = "Importēt CSV";
+            buttonCsvImport.UseVisualStyleBackColor = true;
+            buttonCsvImport.Click += buttonCsvImport_Click;
+            // 
+            // buttonCsvExport
+            // 
+            buttonCsvExport.Location = new Point(168, 251);
+            buttonCsvExport.Name = "buttonCsvExport";
+            buttonCsvExport.Size = new Size(150, 23);
+            buttonCsvExport.TabIndex = 3;
+            buttonCsvExport.Text = "Eksportēt CSV";
+            buttonCsvExport.UseVisualStyleBackColor = true;
+            buttonCsvExport.Click += buttonCsvExport_Click;
+            // 
+            // labelCsvPath
+            // 
+            labelCsvPath.AutoSize = true;
+            labelCsvPath.Location = new Point(12, 277);
+            labelCsvPath.Name = "labelCsvPath";
+            labelCsvPath.Size = new Size(82, 15);
+            labelCsvPath.TabIndex = 0;
+            labelCsvPath.Text = "Tiks saglabāts:";
+            // 
+            // openFileDialogCsv
+            // 
+            openFileDialogCsv.FileName = "import.csv";
+            openFileDialogCsv.Filter = "Comma-separated values (*.csv)|*.csv";
+            openFileDialogCsv.Title = "Izvēlieties datus, ko importēt";
+            openFileDialogCsv.FileOk += openFileDialogCsv_FileOk;
+            // 
+            // saveFileDialogCsv
+            // 
+            saveFileDialogCsv.FileName = "exported.csv";
+            saveFileDialogCsv.Filter = "Comma-separated values (*.csv)|*.csv";
+            saveFileDialogCsv.Title = "Izvēlieties kur saglabāt datni";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(493, 239);
+            ClientSize = new Size(493, 299);
             Controls.Add(buttonProductDelete);
             Controls.Add(buttonProductRead);
             Controls.Add(buttonProductEdit);
+            Controls.Add(buttonCsvExport);
+            Controls.Add(buttonCsvImport);
             Controls.Add(buttonProductAdd);
             Controls.Add(textBoxProductHeight);
             Controls.Add(textBoxProductWidth);
@@ -219,6 +278,8 @@
             Controls.Add(comboBoxProductSelect);
             Controls.Add(labelProductHeight);
             Controls.Add(labelProductWidth);
+            Controls.Add(labelCsvPath);
+            Controls.Add(labelCsvText);
             Controls.Add(labelProductLength);
             Controls.Add(labelProductDesc);
             Controls.Add(labelProductPrice);
@@ -250,5 +311,11 @@
         private Button buttonProductRead;
         private Button buttonProductEdit;
         private Button buttonProductDelete;
+        private Label labelCsvText;
+        private Button buttonCsvImport;
+        private Button buttonCsvExport;
+        private Label labelCsvPath;
+        private OpenFileDialog openFileDialogCsv;
+        private SaveFileDialog saveFileDialogCsv;
     }
 }

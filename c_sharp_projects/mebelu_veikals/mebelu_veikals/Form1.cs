@@ -1,4 +1,6 @@
 ﻿using System.ComponentModel;
+using System.Security;
+using System.Windows.Forms;
 
 namespace mebelu_veikals
 {
@@ -144,7 +146,7 @@ namespace mebelu_veikals
         {
             try
             {
-                furnitureManager.RemoveItemFromTable(comboBoxProductSelect.Text);
+                furnitureManager.RemoveItemFromTable(textBoxProductName.Text);
                 UpdateCombobox();
                 MessageBox.Show("Ieraksts dzēsts.");
             }
@@ -153,6 +155,34 @@ namespace mebelu_veikals
                 MessageBox.Show("Notikusi kļūda!");
             }
         }
-    }
 
+        private void buttonCsvImport_Click(object sender, EventArgs e)
+        {
+            if (openFileDialogCsv.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    var sr = new StreamReader(openFileDialogCsv.FileName);
+                }
+                catch (SecurityException ex)
+                {
+                    MessageBox.Show($"Security error.\n\nError message: {ex.Message}\n\n" +
+                    $"Details:\n\n{ex.StackTrace}");
+                }
+            }
+        }
+
+        private void buttonCsvExport_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialogCsv.ShowDialog() == DialogResult.OK)
+            {
+
+            }
+        }
+
+        private void openFileDialogCsv_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+    }
 }
