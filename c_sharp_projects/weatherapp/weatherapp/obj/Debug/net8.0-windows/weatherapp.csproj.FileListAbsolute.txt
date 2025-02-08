@@ -31,3 +31,4 @@ D:\Programming\Repositories\datorium\c_sharp_projects\weatherapp\weatherapp\obj\
 D:\Programming\Repositories\datorium\c_sharp_projects\weatherapp\weatherapp\obj\Debug\net8.0-windows\weatherapp.pdb
 D:\Programming\Repositories\datorium\c_sharp_projects\weatherapp\weatherapp\obj\Debug\net8.0-windows\weatherapp.genruntimeconfig.cache
 D:\Programming\Repositories\datorium\c_sharp_projects\weatherapp\weatherapp\obj\Debug\net8.0-windows\ref\weatherapp.dll
+D:\Programming\Repositories\datorium\c_sharp_projects\weatherapp\weatherapp\obj\Debug\net8.0-windows\weatherapp.Properties.Resources.resources

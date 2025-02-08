@@ -43,46 +43,58 @@
             showBtn = new Button();
             moonPhase = new TextBox();
             label7 = new Label();
+            conditionPic = new PictureBox();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
+            ((System.ComponentModel.ISupportInitialize)conditionPic).BeginInit();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
             SuspendLayout();
             // 
             // maxTemp
             // 
-            maxTemp.Location = new Point(182, 48);
+            maxTemp.Location = new Point(144, 10);
             maxTemp.Name = "maxTemp";
             maxTemp.Size = new Size(100, 23);
             maxTemp.TabIndex = 0;
+            maxTemp.TextChanged += this.maxTemp_TextChanged;
             // 
             // minTemp
             // 
-            minTemp.Location = new Point(182, 77);
+            minTemp.Location = new Point(144, 39);
             minTemp.Name = "minTemp";
             minTemp.Size = new Size(100, 23);
             minTemp.TabIndex = 1;
+            minTemp.TextChanged += this.minTemp_TextChanged;
             // 
             // humidity
             // 
-            humidity.Location = new Point(182, 106);
+            humidity.Location = new Point(144, 68);
             humidity.Name = "humidity";
             humidity.Size = new Size(100, 23);
             humidity.TabIndex = 2;
+            humidity.TextChanged += this.humidity_TextChanged;
             // 
             // windSpeed
             // 
-            windSpeed.Location = new Point(182, 135);
+            windSpeed.Location = new Point(144, 102);
             windSpeed.Name = "windSpeed";
             windSpeed.Size = new Size(100, 23);
             windSpeed.TabIndex = 3;
+            windSpeed.TextChanged += this.windSpeed_TextChanged;
             // 
             // atmPressure
             // 
-            atmPressure.Location = new Point(182, 164);
+            atmPressure.Location = new Point(144, 131);
             atmPressure.Name = "atmPressure";
             atmPressure.Size = new Size(100, 23);
             atmPressure.TabIndex = 4;
+            atmPressure.TextChanged += this.atmPressure_TextChanged;
             // 
             // city
             // 
-            city.Location = new Point(369, 164);
+            city.Location = new Point(393, 117);
             city.Name = "city";
             city.Size = new Size(100, 23);
             city.TabIndex = 5;
@@ -90,7 +102,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(44, 56);
+            label1.Location = new Point(6, 13);
             label1.Name = "label1";
             label1.Size = new Size(132, 15);
             label1.TabIndex = 6;
@@ -99,7 +111,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(44, 85);
+            label2.Location = new Point(6, 42);
             label2.Name = "label2";
             label2.Size = new Size(125, 15);
             label2.TabIndex = 7;
@@ -108,7 +120,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(44, 114);
+            label3.Location = new Point(6, 71);
             label3.Name = "label3";
             label3.Size = new Size(52, 15);
             label3.TabIndex = 8;
@@ -117,7 +129,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(44, 143);
+            label4.Location = new Point(6, 105);
             label4.Name = "label4";
             label4.Size = new Size(68, 15);
             label4.TabIndex = 9;
@@ -126,7 +138,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(44, 172);
+            label5.Location = new Point(6, 134);
             label5.Name = "label5";
             label5.Size = new Size(116, 15);
             label5.TabIndex = 10;
@@ -135,7 +147,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(322, 172);
+            label6.Location = new Point(346, 120);
             label6.Name = "label6";
             label6.Size = new Size(41, 15);
             label6.TabIndex = 11;
@@ -143,7 +155,7 @@
             // 
             // showBtn
             // 
-            showBtn.Location = new Point(322, 193);
+            showBtn.Location = new Point(346, 146);
             showBtn.Name = "showBtn";
             showBtn.Size = new Size(147, 23);
             showBtn.TabIndex = 12;
@@ -153,44 +165,89 @@
             // 
             // moonPhase
             // 
-            moonPhase.Location = new Point(182, 193);
+            moonPhase.Location = new Point(144, 160);
             moonPhase.Name = "moonPhase";
             moonPhase.Size = new Size(100, 23);
             moonPhase.TabIndex = 13;
+            moonPhase.TextChanged += moonPhase_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(44, 201);
+            label7.Location = new Point(6, 168);
             label7.Name = "label7";
             label7.Size = new Size(71, 15);
             label7.TabIndex = 14;
             label7.Text = "Mēness fāze";
             // 
+            // conditionPic
+            // 
+            conditionPic.Location = new Point(346, 6);
+            conditionPic.Name = "conditionPic";
+            conditionPic.Size = new Size(147, 105);
+            conditionPic.SizeMode = PictureBoxSizeMode.StretchImage;
+            conditionPic.TabIndex = 15;
+            conditionPic.TabStop = false;
+            // 
+            // tabControl1
+            // 
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Location = new Point(12, 12);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(507, 289);
+            tabControl1.TabIndex = 16;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(conditionPic);
+            tabPage1.Controls.Add(maxTemp);
+            tabPage1.Controls.Add(label7);
+            tabPage1.Controls.Add(minTemp);
+            tabPage1.Controls.Add(moonPhase);
+            tabPage1.Controls.Add(humidity);
+            tabPage1.Controls.Add(showBtn);
+            tabPage1.Controls.Add(windSpeed);
+            tabPage1.Controls.Add(label6);
+            tabPage1.Controls.Add(atmPressure);
+            tabPage1.Controls.Add(label5);
+            tabPage1.Controls.Add(city);
+            tabPage1.Controls.Add(label4);
+            tabPage1.Controls.Add(label1);
+            tabPage1.Controls.Add(label3);
+            tabPage1.Controls.Add(label2);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(499, 261);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPage1";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(192, 72);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPage2";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(559, 471);
-            Controls.Add(label7);
-            Controls.Add(moonPhase);
-            Controls.Add(showBtn);
-            Controls.Add(label6);
-            Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(city);
-            Controls.Add(atmPressure);
-            Controls.Add(windSpeed);
-            Controls.Add(humidity);
-            Controls.Add(minTemp);
-            Controls.Add(maxTemp);
+            ClientSize = new Size(531, 312);
+            Controls.Add(tabControl1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)conditionPic).EndInit();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -210,5 +267,9 @@
         private Button showBtn;
         private TextBox moonPhase;
         private Label label7;
+        private PictureBox conditionPic;
+        private TabControl tabControl1;
+        private TabPage tabPage1;
+        private TabPage tabPage2;
     }
 }
