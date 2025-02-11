@@ -97,6 +97,10 @@ namespace weatherapp
         private void saveCity_Click(object sender, EventArgs e)
         {
             var cityName = forecastCity.Text;
+
+            DataGridView dataGrid = new DataGridView();
+            dataGrid.Size = new Size(810, 224);
+            dataGrid.Location = new Point(9, 53);
             TabPage page = new TabPage("Cat36");
             weatherTabs.TabPages.Add(page);
         }
